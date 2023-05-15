@@ -2,6 +2,7 @@
 
 $paragraph = $_GET['paragraph'];
 $badword = $_GET['badword'];
+$censoredParagraph = str_replace($badword, "***", $paragraph)
 
 ?>
 
@@ -29,6 +30,14 @@ $badword = $_GET['badword'];
       <p><?php echo $paragraph ?></p>
       <span class="fw-semibold">Length:</span>
       <span><?php echo strlen($paragraph) ?></span>
+    </div>
+
+    <div>
+      <h2>Censored Paragraph</h2>
+      <span class="fw-semibold">Text:</span>
+      <p><?php echo $censoredParagraph ?></p>
+      <span class="fw-semibold">Length:</span>
+      <span><?php echo strlen($censoredParagraph) ?></span>
     </div>
 
   </div>
