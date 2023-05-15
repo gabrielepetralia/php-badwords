@@ -1,3 +1,10 @@
+<?php
+
+$paragraph = $_GET['paragraph'];
+$badword = $_GET['badword'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +21,17 @@
 </head>
 
 <body>
-  
+  <div class="container my-5">
+
+    <div class="mb-5">
+      <h2>Default Paragraph</h2>
+      <span class="fw-semibold">Text:</span>
+      <p><?php echo $paragraph ?></p>
+      <span class="fw-semibold">Length:</span>
+      <span><?php echo strlen($paragraph) ?></span>
+    </div>
+
+  </div>
 </body>
 
 </html>
